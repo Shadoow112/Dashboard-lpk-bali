@@ -2,15 +2,16 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Program Pelatihan - Bali</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="bg-slate-50 flex h-screen overflow-hidden">
+<body class="bg-slate-50 flex h-screen overflow-hidden font-sans">
     <aside class="w-64 bg-[#0f172a] text-slate-400 p-6 flex flex-col">
         <div class="flex items-center gap-3 mb-10 text-white font-bold text-xs uppercase border-b border-slate-800 pb-4">Disnaker Bali</div>
-        <nav class="space-y-2">
-            <a href="index.html" class="flex items-center gap-3 p-3 hover:bg-slate-800 rounded-lg text-sm">
+        <nav class="space-y-1">
+            <a href="index.html" class="flex items-center gap-3 p-3 hover:bg-slate-800 rounded-lg text-sm transition">
                 <i data-lucide="layout-dashboard" class="w-4 h-4"></i> Data LPK
             </a>
             <a href="program.html" class="flex items-center gap-3 p-3 bg-blue-600 text-white rounded-lg text-sm font-medium">
@@ -19,18 +20,21 @@
             <a href="peserta.html" class="flex items-center gap-3 p-3 hover:bg-slate-800 rounded-lg text-sm transition">
                 <i data-lucide="users" class="w-4 h-4"></i> Peserta Didik
             </a>
+            <a href="pemagangan.html" class="flex items-center gap-3 p-3 hover:bg-slate-800 rounded-lg text-sm transition">
+                <i data-lucide="briefcase" class="w-4 h-4"></i> Pemagangan
+            </a>
         </nav>
     </aside>
-
     <main class="flex-1 flex flex-col">
-        <header class="bg-white p-6 border-b flex justify-between items-center">
-            <h1 class="text-xl font-bold">Program Pelatihan</h1>
-            <img src="assets/img/profile.jpg" onerror="this.src='https://i.pravatar.cc/100'" class="w-8 h-8 rounded-full shadow">
+        <header class="bg-white p-6 border-b flex justify-between items-center shadow-sm">
+            <h1 class="text-xl font-bold text-slate-800">Manajemen Program</h1>
+            <img src="assets/img/profile.jpg" onerror="this.src='https://i.pravatar.cc/100'" class="w-8 h-8 rounded-full border shadow-sm">
         </header>
-        <div class="p-8">
-            <div class="bg-white p-10 rounded-2xl border text-center shadow-sm">
-                <h2 class="text-2xl font-bold text-orange-500">Ini Halaman Program</h2>
-                <p class="text-slate-500 mt-2">Daftar kurikulum pelatihan kerja tersedia di sini.</p>
+        <div class="p-8 overflow-y-auto">
+            <div class="bg-white p-10 rounded-2xl border border-slate-200 shadow-sm text-center">
+                <i data-lucide="award" class="w-16 h-16 mx-auto text-blue-500 mb-4"></i>
+                <h2 class="text-2xl font-bold">Daftar Program Sertifikasi</h2>
+                <p class="text-slate-500 mt-2 italic">Halaman ini mengelola kurikulum pelatihan kerja se-Provinsi Bali.</p>
             </div>
         </div>
     </main>
