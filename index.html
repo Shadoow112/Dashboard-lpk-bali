@@ -3,124 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistem Informasi LPK Bali</title>
+    <title>Data LPK - Bali</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        .active-menu { background-color: #2563eb !important; color: white !important; }
-        .content-section { display: none; }
-        .content-section.active { display: block; }
-    </style>
 </head>
-<body class="bg-[#f1f5f9] text-slate-700 overflow-hidden font-sans">
-
-    <div class="flex h-screen w-full">
-        <aside class="w-64 bg-[#0f172a] text-slate-400 hidden lg:flex flex-col flex-shrink-0">
-            <div class="p-6">
-                <div class="flex items-center gap-3 mb-10">
-                    <div class="p-2 bg-white rounded-lg">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Coat_of_arms_of_Bali.svg/1200px-Coat_of_arms_of_Bali.svg.png" class="w-6">
-                    </div>
-                    <div class="text-[10px] font-bold text-white leading-tight uppercase">Disnaker<br>Provinsi Bali</div>
-                </div>
-                
-                <nav class="space-y-1" id="sidebar-nav">
-                    <p class="text-[10px] font-bold text-slate-500 mb-2 uppercase tracking-widest">Menu Utama</p>
-                    <button onclick="showSection('data-lpk')" class="nav-btn w-full flex items-center gap-3 p-3 rounded-lg text-sm transition active-menu" id="btn-data-lpk">
-                        <i data-lucide="layout-dashboard" class="w-4 h-4"></i> Data LPK
-                    </button>
-                    <button onclick="showSection('program')" class="nav-btn w-full flex items-center gap-3 p-3 rounded-lg text-sm transition" id="btn-program">
-                        <i data-lucide="book-open" class="w-4 h-4"></i> Program Pelatihan
-                    </button>
-                    <button onclick="showSection('peserta')" class="nav-btn w-full flex items-center gap-3 p-3 rounded-lg text-sm transition" id="btn-peserta">
-                        <i data-lucide="users" class="w-4 h-4"></i> Peserta Didik
-                    </a>
-                </nav>
-            </div>
-        </aside>
-
-        <div class="flex-1 flex flex-col min-w-0">
-            <header class="bg-white border-b border-slate-200 px-8 py-4 flex justify-between items-center shadow-sm z-10">
-                <h1 class="text-xl font-bold text-slate-800" id="header-title">Data LPK</h1>
-                <div class="flex items-center gap-3">
-                    <div class="text-right">
-                        <p class="text-xs font-bold text-slate-800">I Wayan Suarta, S.E.</p>
-                        <p class="text-[10px] text-slate-400">Administrator</p>
-                    </div>
-                    <img src="assets/img/profile.jpg" onerror="this.src='https://i.pravatar.cc/100'" class="w-9 h-9 rounded-full border-2 border-white shadow-sm">
-                </div>
-            </header>
-
-            <main class="flex-1 overflow-y-auto p-8">
-                
-                <section id="data-lpk" class="content-section active">
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
-                            <p class="text-xs font-bold text-slate-400 uppercase">Total LPK</p>
-                            <h2 class="text-3xl font-black mt-2">245</h2>
-                        </div>
-                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
-                            <p class="text-xs font-bold text-slate-400 uppercase">Aktif</p>
-                            <h2 class="text-3xl font-black mt-2 text-emerald-500">210</h2>
-                        </div>
-                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
-                            <p class="text-xs font-bold text-slate-400 uppercase">Lulusan</p>
-                            <h2 class="text-3xl font-black mt-2 text-blue-500">4.812</h2>
-                        </div>
-                    </div>
-                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6">
-                        <h3 class="font-bold mb-4">Daftar Lembaga</h3>
-                        <div class="text-sm text-slate-500 italic">Memuat data tabel...</div>
-                    </div>
-                </section>
-
-                <section id="program" class="content-section">
-                    <div class="bg-white p-10 rounded-2xl shadow-sm border border-slate-200 text-center">
-                        <i data-lucide="award" class="w-12 h-12 mx-auto text-orange-400 mb-4"></i>
-                        <h2 class="text-2xl font-bold">Program Pelatihan</h2>
-                        <p class="text-slate-500 mt-2">Daftar kurikulum dan program sertifikasi yang tersedia.</p>
-                    </div>
-                </section>
-
-                <section id="peserta" class="content-section">
-                    <div class="bg-white p-10 rounded-2xl shadow-sm border border-slate-200 text-center">
-                        <i data-lucide="users-2" class="w-12 h-12 mx-auto text-indigo-400 mb-4"></i>
-                        <h2 class="text-2xl font-bold">Peserta Didik</h2>
-                        <p class="text-slate-500 mt-2">Manajemen data siswa dan absensi digital.</p>
-                    </div>
-                </section>
-
-            </main>
+<body class="bg-slate-50 flex h-screen overflow-hidden font-sans">
+    <aside class="w-64 bg-[#0f172a] text-slate-400 p-6 flex flex-col">
+        <div class="flex items-center gap-3 mb-10 text-white font-bold text-xs uppercase">
+            <div class="p-2 bg-white rounded-lg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Coat_of_arms_of_Bali.svg/1200px-Coat_of_arms_of_Bali.svg.png" class="w-6"></div>
+            Disnaker Bali
         </div>
-    </div>
-
-    <script>
-        // Inisialisasi Ikon
-        lucide.createIcons();
-
-        // Fungsi Ganti Menu (JavaScript)
-        function showSection(sectionId) {
-            // 1. Sembunyikan semua section
-            document.querySelectorAll('.content-section').forEach(section => {
-                section.classList.remove('active');
-            });
-            // 2. Tampilkan section yang dipilih
-            document.getElementById(sectionId).classList.add('active');
-
-            // 3. Update warna tombol menu
-            document.querySelectorAll('.nav-btn').forEach(btn => {
-                btn.classList.remove('active-menu');
-            });
-            document.getElementById('btn-' + sectionId).classList.add('active-menu');
-
-            // 4. Update Judul Header
-            const titles = {
-                'data-lpk': 'Data LPK',
-                'program': 'Program Pelatihan',
-                'peserta': 'Peserta Didik'
-            };
-            document.getElementById('header-title').innerText = titles[sectionId];
-        }
-    </script>
+        <nav class="space-y-1">
+            <a href="index.html" class="flex items-center gap-3 p-3 bg-blue-600 text-white rounded-lg text-sm font-medium">
+                <i data-lucide="layout-dashboard" class="w-4 h-4"></i> Data LPK
+            </a>
+            <a href="program.html" class="flex items-center gap-3 p-3 hover:bg-slate-800 rounded-lg text-sm transition">
+                <i data-lucide="book-open" class="w-4 h-4"></i> Program Pelatihan
+            </a>
+            <a href="peserta.html" class="flex items-center gap-3 p-3 hover:bg-slate-800 rounded-lg text-sm transition">
+                <i data-lucide="users" class="w-4 h-4"></i> Peserta Didik
+            </a>
+            <a href="pemagangan.html" class="flex items-center gap-3 p-3 hover:bg-slate-800 rounded-lg text-sm transition">
+                <i data-lucide="briefcase" class="w-4 h-4"></i> Pemagangan
+            </a>
+        </nav>
+    </aside>
+    <main class="flex-1 flex flex-col">
+        <header class="bg-white p-6 border-b flex justify-between items-center shadow-sm">
+            <h1 class="text-xl font-bold text-slate-800">Dashboard Data LPK</h1>
+            <img src="assets/img/profile.jpg" onerror="this.src='https://i.pravatar.cc/100'" class="w-8 h-8 rounded-full border shadow-sm">
+        </header>
+        <div class="p-8 overflow-y-auto">
+            <div class="bg-white p-10 rounded-2xl border border-slate-200 shadow-sm">
+                <h2 class="text-2xl font-bold mb-4">Statistik Lembaga Pelatihan</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="p-6 bg-blue-50 rounded-xl border border-blue-100">
+                        <p class="text-blue-600 font-bold">Total LPK</p>
+                        <p class="text-4xl font-black">245</p>
+                    </div>
+                    <div class="p-6 bg-emerald-50 rounded-xl border border-emerald-100">
+                        <p class="text-emerald-600 font-bold">LPK Aktif</p>
+                        <p class="text-4xl font-black">210</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>lucide.createIcons();</script>
 </body>
 </html>
