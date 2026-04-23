@@ -1,0 +1,98 @@
+import React from 'react';
+import { 
+  LayoutDashboard, Building2, GraduationCap, Users, 
+  Briefcase, FileText, Settings, Bell, Search 
+} from 'lucide-react';
+
+// Komponen Kartu Statistik
+const StatCard = ({ title, value, sub, icon: Icon, color }) => (
+  <div className="bg-white p-4 rounded-xl border border-gray-100 shadow-sm">
+    <div className="flex justify-between items-start">
+      <div>
+        <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider">{title}</p>
+        <h3 className="text-2xl font-bold mt-1 text-slate-800">{value}</h3>
+        <p className="text-[10px] text-gray-400 mt-1">{sub}</p>
+      </div>
+      <div className={`p-2.5 rounded-lg ${color} text-white`}>
+        <Icon size={20} />
+      </div>
+    </div>
+  </div>
+);
+
+export default function Dashboard() {
+  return (
+    <div className="flex min-h-screen bg-slate-50 font-sans">
+      {/* SIDEBAR */}
+      <aside className="w-64 bg-[#1e293b] text-slate-300 p-6">
+        <div className="mb-10 flex items-center gap-3">
+          <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center font-bold text-white">D</div>
+          <h1 className="text-sm font-bold text-white leading-tight">DISNAKER<br/>PROVINSI BALI</h1>
+        </div>
+        
+        <nav className="space-y-2">
+          <div className="flex items-center gap-3 p-3 bg-blue-600 text-white rounded-lg cursor-pointer">
+            <LayoutDashboard size={18} />
+            <span className="text-sm">Data LPK</span>
+          </div>
+          {['Program Pelatihan', 'Peserta Didik', 'Absensi', 'Kelulusan', 'Pemagangan'].map((item) => (
+            <div key={item} className="flex items-center gap-3 p-3 hover:bg-slate-800 rounded-lg cursor-pointer transition-all">
+              <Building2 size={18} className="opacity-70" />
+              <span className="text-sm">{item}</span>
+            </div>
+          ))}
+        </nav>
+      </aside>
+
+      {/* MAIN CONTENT */}
+      <main className="flex-1 p-8">
+        {/* TOP BAR */}
+        <header className="flex justify-between items-center mb-8">
+          <div>
+            <h2 className="text-2xl font-bold text-slate-800">Data LPK</h2>
+            <p className="text-sm text-slate-500">Daftar LPK Terdaftar di Provinsi Bali</p>
+          </div>
+          <div className="flex items-center gap-4">
+            <div className="relative">
+              <Search className="absolute left-3 top-2.5 text-gray-400" size={18} />
+              <input type="text" placeholder="Cari nama LPK..." className="pl-10 pr-4 py-2 bg-white border border-gray-200 rounded-lg text-sm outline-none focus:ring-2 ring-blue-500" />
+            </div>
+            <Bell className="text-slate-400 cursor-pointer" />
+            <div className="w-8 h-8 rounded-full bg-slate-300 overflow-hidden border-2 border-white shadow-sm">
+              <img src="https://i.pravatar.cc/100" alt="user" />
+            </div>
+          </div>
+        </header>
+
+        {/* STATS GRID */}
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
+          <StatCard title="Total LPK" value="245" sub="Aktif: 210 | Non: 35" icon={Building2} color="bg-blue-600" />
+          <StatCard title="LPK Aktif" value="210" sub="85.71% dari total" icon={LayoutDashboard} color="bg-emerald-500" />
+          <StatCard title="Total Program" value="532" sub="di 210 LPK" icon={FileText} color="bg-orange-500" />
+          <StatCard title="Peserta" value="6.842" sub="Sedang pelatihan" icon={Users} color="bg-indigo-500" />
+          <StatCard title="Total Lulus" value="4.812" sub="70.33% kelulusan" icon={GraduationCap} color="bg-teal-500" />
+          <StatCard title="Magang" value="1.285" sub="26.71% penempatan" icon={Briefcase} color="bg-blue-800" />
+        </div>
+
+        {/* BOTTOM SECTION (Placeholder untuk Tabel & Grafik) */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="lg:col-span-2 bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 className="font-bold text-slate-800 mb-4">Daftar LPK Terbaru</h3>
+            <div className="h-64 bg-slate-50 border-2 border-dashed border-gray-200 rounded-lg flex items-center justify-center text-gray-400">
+              Tabel LPK Akan Muncul di Sini
+            </div>
+          </div>
+          <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 className="font-bold text-slate-800 mb-4">Ringkasan Kinerja</h3>
+            <div className="space-y-4">
+              <div className="h-2 w-full bg-gray-100 rounded-full overflow-hidden">
+                <div className="h-full bg-blue-500 w-[70%]" />
+              </div>
+              <p className="text-xs text-gray-500 text-right font-medium">Tingkat Kelulusan: 70.33%</p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  );
+}
