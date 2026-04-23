@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Peserta Didik - Bali</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-slate-50 flex h-screen overflow-hidden">
+    <aside class="w-64 bg-[#0f172a] text-slate-400 p-6 flex flex-col">
+        <div class="flex items-center gap-3 mb-10 text-white font-bold text-xs uppercase border-b border-slate-800 pb-4">Disnaker Bali</div>
+        <nav class="space-y-2">
+            <a href="index.html" class="flex items-center gap-3 p-3 hover:bg-slate-800 rounded-lg text-sm">
+                <i data-lucide="layout-dashboard" class="w-4 h-4"></i> Data LPK
+            </a>
+            <a href="program.html" class="flex items-center gap-3 p-3 hover:bg-slate-800 rounded-lg text-sm transition">
+                <i data-lucide="book-open" class="w-4 h-4"></i> Program Pelatihan
+            </a>
+            <a href="peserta.html" class="flex items-center gap-3 p-3 bg-blue-600 text-white rounded-lg text-sm font-medium">
+                <i data-lucide="users" class="w-4 h-4"></i> Peserta Didik
+            </a>
+        </nav>
+    </aside>
+
+    <main class="flex-1 flex flex-col">
+        <header class="bg-white p-6 border-b flex justify-between items-center">
+            <h1 class="text-xl font-bold">Peserta Didik</h1>
+            <img src="assets/img/profile.jpg" onerror="this.src='https://i.pravatar.cc/100'" class="w-8 h-8 rounded-full shadow">
+        </header>
+        <div class="p-8">
+            <div class="bg-white p-10 rounded-2xl border text-center shadow-sm">
+                <h2 class="text-2xl font-bold text-indigo-500">Ini Halaman Peserta</h2>
+                <p class="text-slate-500 mt-2">Manajemen data peserta didik dan absensi.</p>
+            </div>
+        </div>
+    </main>
+    <script>lucide.createIcons();</script>
+</body>
+</html>
